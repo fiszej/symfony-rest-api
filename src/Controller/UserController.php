@@ -23,7 +23,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/api/user/{id}", name="user", methods={"GET"})
+     * @Route("/v1/user/{id}", name="user", methods={"GET"})
      */
     public function show($id): Response
     {
@@ -47,7 +47,7 @@ class UserController extends AbstractController
         return $response;
     }
     /**
-     * @Route("/api/user", name="create_user", methods={"POST"})
+     * @Route("/v1/user", name="create_user", methods={"POST"})
      * 
      */
     public function create(Request $request): JsonResponse
@@ -81,7 +81,7 @@ class UserController extends AbstractController
         ], JsonResponse::HTTP_CREATED);
     }
     /**
-     * @Route("/api/user/{id}", name="update_user", methods={"PUT"})
+     * @Route("/v1/user/{id}", name="update_user", methods={"PUT"})
      */
     public function update($id, Request $request): JsonResponse
     {
@@ -108,7 +108,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/api/user/{id}", name="delete_user", methods={"DELETE"} )
+     * @Route("/v1/user/{id}", name="delete_user", methods={"DELETE"} )
      */
     public function delete($id): JsonResponse
     {
@@ -129,7 +129,7 @@ class UserController extends AbstractController
     }
 
      /**
-     * @Route("/api/user", name="all_users", methods={"GET"})
+     * @Route("/v1/user", name="all_users", methods={"GET"})
      */
     public function all(): Response
     {
